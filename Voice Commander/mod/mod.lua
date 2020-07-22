@@ -44,7 +44,7 @@ function Vcmd(lvalue)
 	end
 end
 
-local menu_title = ("Voice Commander V1.0")
+local menu_title = ("Voice Commander V2")
 local message_list = {"Thanks", "Let's go", "Come with Me", "Right Place", "Right way", "Wrong way", "Get In", "Hurry", "love it", "fu@#***", "Need Ammo", "Need Medic Bag", "Need Help", "Keycard Here", "Crowbar Here","EXIT"}
 local menu_options = {}
  
