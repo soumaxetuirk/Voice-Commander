@@ -14,5 +14,13 @@
             "run_in_menu": false,
             "run_in_game": true
 		}
+	],
+	"updates" : [
+		{
+			"identifier" : "Voice_Commander",
+			"host" : {
+				"meta" : "https://github.com/soumaxetuirk/Voice-Commander/master/meta.json"
+			}
+		}
 	]
 }
