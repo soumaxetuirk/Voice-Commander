@@ -1,0 +1,18 @@
+{
+	"name" : "Voice Commander",
+	"description" : "Ingame menu to give voice commands by your characters",
+	"author" : "Soum_Axetuirk",
+	"contact" : "soumaxetuirk@gmail.com",
+	"image" : "logo.png",
+	"version" : "1.0",
+	"keybinds" : [
+		{
+			"keybind_id": "voice_cmmd",
+            "name": "Voice Commander",
+            "description": "Pressing specified key will open a quick menu",
+            "script_path": "mod/mod.lua",
+            "run_in_menu": false,
+            "run_in_game": true
+		}
+	]
+}
