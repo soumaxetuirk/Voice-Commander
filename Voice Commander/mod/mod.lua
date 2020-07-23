@@ -69,59 +69,54 @@ function Vcmd(lvalue)
 		managers.player:local_player():sound():say("v08",true,true)
 	
 	elseif lvalue == "I NEED  >>   " then
-		local menu_title = ("Voice Commander V3")
-		local message_list = {"Ammo bag", "Medic bag", "HELP","Back","Exit"}
-		local menu_options = {}
- 
-		for i=1,#message_list do
-		menu_options[i] ={text = message_list[i], data = message_list[i], callback = Vcmd}
-		end
-		local menu = QuickMenu:new( menu_title, "I need >>", menu_options )
-		menu:Show()
+		local Addmenu = QuickMenu:new( menu_title, "I need >>", menu_options2)
+		Addmenu:Show()
 		
 	elseif lvalue == "Back" then
-		local menu_title = ("Voice Commander V3")
-		local message_list = {"Thanks", "Let's go", "Come with Me", "Right Place", "Right way", "Wrong way", "Get In", "Hurry", "love it", "fu@#***", "I NEED  >>   ", "Stealth   >>   ", "Loud  >>   ", "Keycard Here", "Crowbar Here","EXIT"}
-		local menu_options = {}
- 
-			for i=1,#message_list do
-			menu_options[i] ={text = message_list[i], data = message_list[i], callback = Vcmd}
-		end
-		local menu = QuickMenu:new( menu_title, "by Soum_AxetuirK", menu_options )
-		menu:Show()
+		local Menu = QuickMenu:new( menu_title, "by Soum_AxetuirK", menu_options )
+		Menu:Show()
 
 	elseif lvalue == "Stealth   >>   " then
-		local menu_title = ("Voice Commander V3")
-		local message_list = {"careful", "watch civillians", "Takeout camers","Use cable ties","Back","Exit"}
-		local menu_options = {}
- 
-		for i=1,#message_list do
-		menu_options[i] ={text = message_list[i], data = message_list[i], callback = Vcmd}
-		end
-		local menu = QuickMenu:new( menu_title, "Stealth Menu", menu_options )
-		menu:Show()
+		local Addmenu = QuickMenu:new( menu_title, "Stealth >>", menu_options3 )
+		Addmenu:Show()
 
 	elseif lvalue == "Loud  >>   " then
-		local menu_title = ("Voice Commander V3")
-		local message_list = {"Keep Defend", "Get Out", "Get Moving","we are done","Back","Exit"}
-		local menu_options = {}
- 
-		for i=1,#message_list do
-		menu_options[i] ={text = message_list[i], data = message_list[i], callback = Vcmd}
-		end
-		local menu = QuickMenu:new( menu_title, "Loud Menu", menu_options )
-		menu:Show()
+		local Addmenu = QuickMenu:new( menu_title, "Loud >>", menu_options4 )
+		Addmenu:Show()
 		end
 end
 
 local menu_title = ("Voice Commander V3")
 local message_list = {"Thanks", "Let's go", "Come with Me", "Right Place", "Right way", "Wrong way", "Get In", "Hurry", "love it", "fu@#***", "I NEED  >>   ", "Stealth   >>   ", "Loud  >>   ", "Keycard Here", "Crowbar Here","EXIT"}
-local menu_options = {}
+local message_list2 = {"Ammo bag", "Medic bag", "HELP","Back","Exit"}
+local message_list3 = {"careful", "watch civillians", "Takeout camers","Use cable ties","Back","Exit"}
+local message_list4 = {"Keep Defend", "Get Out", "Get Moving","we are done","Back","Exit"}
+_G.menu_options = {}
  
 	for i=1,#message_list do
 		menu_options[i] ={text = message_list[i], data = message_list[i], callback = Vcmd}
 	end
-local menu = QuickMenu:new( menu_title, "by Soum_AxetuirK", menu_options )
-menu:Show()
+_G.menu_options2 = {}
+ 
+	for i=1,#message_list2 do
+		menu_options2[i] ={text = message_list2[i], data = message_list2[i], callback = Vcmd}
+	end
+_G.menu_options3 = {}
+ 
+	for i=1,#message_list3 do
+		menu_options3[i] ={text = message_list3[i], data = message_list3[i], callback = Vcmd}
+	end
+_G.menu_options4 = {}
+ 
+	for i=1,#message_list4 do
+		menu_options4[i] ={text = message_list4[i], data = message_list4[i], callback = Vcmd}
+	end	
 
+_G.Menu = QuickMenu:new( menu_title, "by Soum_AxetuirK", menu_options )
+
+if Menu.visible then 
+    Menu:Hide()
+else
+    Menu:Show()
+end
 
